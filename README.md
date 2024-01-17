@@ -1,2 +1,7 @@
-# java_notes
-Эксперименты и тесты на java и kotlin. Примеры к разобранным вопросам канала https://t.me/javaDevNotes
+## java_notes
+Эксперименты и тесты на java и kotlin.
+Примеры к разобранным вопросам канала https://t.me/javaDevNotes
+
+### The requirements
+
+- Java 21
