@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration>
+    <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%n [ConsoleAppender] %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="ConsoleAppender2" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%n [ConsoleAppender2] %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="Simple Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern> [%d{HH:mm:ss.SSS}] [%-5level] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="com" level="TRACE" additivity="false">
+        <appender-ref ref="ConsoleAppender"/>
+    </logger>
+    <logger name="com.turlyunef" level="DEBUG" additivity="false">
+        <appender-ref ref="Simple Console"/>
+    </logger>
+<!--    На что влияет параметр additivity="true" ?-->
+    <logger name="com.turlyunef.logback" level="WARN" additivity="true">
+        <appender-ref ref="ConsoleAppender2"/>
+    </logger>
+    <root level="INFO">
+        <appender-ref ref="ConsoleAppender"/>
+    </root>
+</configuration>
