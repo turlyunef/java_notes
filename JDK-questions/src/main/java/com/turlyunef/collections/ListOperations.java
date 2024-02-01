@@ -13,6 +13,7 @@ public class ListOperations {
 
     /**
      * Что произойдет с обходом цикла, если внутри него произойдет удаление элемента
+     * полезная статья https://javarush.com/groups/posts/1935-udalenie-ehlementa-iz-spiska-arraylist
      */
     private static void testLoopWithDeletedElement() {
         List<Integer> list = new ArrayList<>();
