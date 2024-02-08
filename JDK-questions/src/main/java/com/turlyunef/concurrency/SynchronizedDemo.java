@@ -18,11 +18,12 @@ public class SynchronizedDemo {
             for (int i = 0; i < 1000; i++) {
                 sequence.increment();
             }
+            System.out.println("Counting was finished!");
         });
         one.start();
         second.start();
         one.join();
-        second.join();
+        second.join(); // требуются чтобы main поток дождался результатов перед их выводом
         System.out.println(sequence.getCount());
     }
 
